@@ -1,8 +1,8 @@
-# \# Cadastro de Clientes - Spring Boot
+## Cadastro de Clientes - Spring Boot
 
 
 
-\## 📖 Sobre o Projeto
+## 📖 Sobre o Projeto
 
 
 
@@ -14,39 +14,39 @@ A aplicação permite realizar operações completas de CRUD (Create, Read, Upda
 
 
 
-\---
+---
 
 
 
-\## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 
 
-\* Java 17
+* Java 17
 
-\* Spring Boot
+* Spring Boot
 
-\* Spring Web
+* Spring Web
 
-\* Spring Data JPA
+* Spring Data JPA
 
-\* Hibernate
+* Hibernate
 
-\* MySQL
+* MySQL
 
-\* Maven
+* Maven
 
-\* Postman
+* Postman
 
-\* IntelliJ IDEA
-
-
-
-\---
+* IntelliJ IDEA
 
 
 
-\## 📂 Arquitetura do Projeto
+---
+
+
+
+## 📂 Arquitetura do Projeto
 
 
 
@@ -58,15 +58,15 @@ O projeto foi desenvolvido seguindo o padrão de Arquitetura em Camadas:
 
 Controller
 
-&#x20;   ↓
+   ↓
 
 Service
 
-&#x20;   ↓
+   ↓
 
 Repository
 
-&#x20;   ↓
+   ↓
 
 Banco de Dados
 
@@ -74,7 +74,7 @@ Banco de Dados
 
 
 
-\### Controller
+### Controller
 
 
 
@@ -82,7 +82,7 @@ Responsável por receber as requisições HTTP da API e devolver as respostas ao
 
 
 
-\### Service
+### Service
 
 
 
@@ -90,7 +90,7 @@ Contém as regras de negócio da aplicação.
 
 
 
-\### Repository
+### Repository
 
 
 
@@ -98,7 +98,7 @@ Responsável pela comunicação com o banco de dados utilizando Spring Data JPA.
 
 
 
-\### Entity
+### Entity
 
 
 
@@ -106,11 +106,11 @@ Representa a tabela do banco de dados através de classes Java.
 
 
 
-\---
+---
 
 
 
-\## 🗄️ Estrutura do Projeto
+## 🗄️ Estrutura do Projeto
 
 
 
@@ -120,39 +120,39 @@ src
 
 └── main
 
-&#x20;   ├── java
+   ├── java
 
-&#x20;   │   └── com.lucas.cadastrocliente
+   │   └── com.lucas.cadastrocliente
 
-&#x20;   │       ├── controller
+   │       ├── controller
 
-&#x20;   │       │   └── ClienteController
+   │       │   └── ClienteController
 
-&#x20;   │       ├── service
+   │       ├── service
 
-&#x20;   │       │   └── ClienteService
+   │       │   └── ClienteService
 
-&#x20;   │       ├── repository
+   │       ├── repository
 
-&#x20;   │       │   └── ClienteRepository
+   │       │   └── ClienteRepository
 
-&#x20;   │       ├── model
+   │       ├── model
 
-&#x20;   │       │   └── Cliente
+   │       │   └── Cliente
 
-&#x20;   │       └── CadastroClienteApplication
+   │       └── CadastroClienteApplication
 
-&#x20;   │
+   │
 
-&#x20;   └── resources
+   └── resources
 
-&#x20;       └── application.properties
+       └── application.properties
 
 ```
 
 
 
-\---
+---
 
 
 
@@ -168,11 +168,11 @@ Tabela utilizada:
 
 CREATE TABLE cliente (
 
-&#x20;   id BIGINT AUTO\_INCREMENT PRIMARY KEY,
+   id BIGINT AUTO\_INCREMENT PRIMARY KEY,
 
-&#x20;   nome VARCHAR(100) NOT NULL,
+   nome VARCHAR(100) NOT NULL,
 
-&#x20;   email VARCHAR(100) NOT NULL
+   email VARCHAR(100) NOT NULL
 
 );
 
@@ -180,15 +180,15 @@ CREATE TABLE cliente (
 
 
 
-\---
+---
 
 
 
-\## 🔗 Endpoints da API
+## 🔗 Endpoints da API
 
 
 
-\### Buscar todos os clientes
+### Buscar todos os clientes
 
 
 
@@ -200,23 +200,23 @@ GET /clientes
 
 
 
-\#### Exemplo de resposta
+#### Exemplo de resposta
 
 
 
 ```json
 
-\[
+[
 
-&#x20; {
+ {
 
-&#x20;   "id": 1,
+   "id": 1,
 
-&#x20;   "nome": "Lucas",
+   "nome": "Lucas",
 
-&#x20;   "email": "lucas@email.com"
+   "email": "lucas@email.com"
 
-&#x20; }
+ }
 
 ]
 
@@ -224,11 +224,11 @@ GET /clientes
 
 
 
-\---
+---
 
 
 
-\### Buscar cliente por ID
+### Buscar cliente por ID
 
 
 
@@ -240,7 +240,7 @@ GET /clientes/{id}
 
 
 
-\#### Exemplo
+#### Exemplo
 
 
 
@@ -252,11 +252,11 @@ GET /clientes/1
 
 
 
-\---
+---
 
 
 
-\### Cadastrar cliente
+### Cadastrar cliente
 
 
 
@@ -268,7 +268,7 @@ POST /clientes
 
 
 
-\#### Body
+#### Body
 
 
 
@@ -276,9 +276,9 @@ POST /clientes
 
 {
 
-&#x20; "nome": "Lucas",
+ "nome": "Lucas",
 
-&#x20; "email": "lucas@email.com"
+ "email": "lucas@email.com"
 
 }
 
@@ -286,11 +286,11 @@ POST /clientes
 
 
 
-\---
+---
 
 
 
-\### Atualizar cliente
+### Atualizar cliente
 
 
 
@@ -302,7 +302,7 @@ PUT /clientes/{id}
 
 
 
-\#### Body
+#### Body
 
 
 
@@ -310,9 +310,9 @@ PUT /clientes/{id}
 
 {
 
-&#x20; "nome": "Lucas Ferreira",
+ "nome": "Lucas Ferreira",
 
-&#x20; "email": "lucasferreira@email.com"
+ "email": "lucasferreira@email.com"
 
 }
 
@@ -320,11 +320,11 @@ PUT /clientes/{id}
 
 
 
-\---
+---
 
 
 
-\### Remover cliente
+### Remover cliente
 
 
 
@@ -336,7 +336,7 @@ DELETE /clientes/{id}
 
 
 
-\#### Exemplo
+#### Exemplo
 
 
 
@@ -348,11 +348,11 @@ DELETE /clientes/1
 
 
 
-\---
+---
 
 
 
-\## ⚙️ Configuração do Banco de Dados
+## ⚙️ Configuração do Banco de Dados
 
 
 
@@ -362,11 +362,11 @@ Arquivo `application.properties`:
 
 ```properties
 
-spring.datasource.url=jdbc:mysql://localhost:3306/cadastro\_cliente
+spring.datasource.url=jdbc:mysql://localhost:3306/cadastro_cliente
 
-spring.datasource.username=SEU\_USUARIO
+spring.datasource.username=SEU_USUARIO
 
-spring.datasource.password=SUA\_SENHA
+spring.datasource.password=SUA_SENHA
 
 
 
@@ -378,27 +378,27 @@ spring.jpa.show-sql=true
 
 
 
-\---
+---
 
 
 
-\## ▶️ Como Executar o Projeto
+## ▶️ Como Executar o Projeto
 
 
 
-\### Clonar o repositório
+### Clonar o repositório
 
 
 
 ```bash
 
-git clone https://github.com/lucasferreira26-dev/spring\_boot\_cadastro\_cliente.git
+git clone https://github.com/lucasferreira26-dev/spring_boot_cadastro_cliente.git
 
 ```
 
 
 
-\### Entrar na pasta do projeto
+### Entrar na pasta do projeto
 
 
 
@@ -410,7 +410,7 @@ cd cadastro-cliente
 
 
 
-\### Executar
+### Executar
 
 
 
@@ -434,11 +434,11 @@ CadastroClienteApplication
 
 
 
-\---
+---
 
 
 
-\## 🎯 Objetivos de Aprendizagem
+## 🎯 Objetivos de Aprendizagem
 
 
 
@@ -446,33 +446,33 @@ Durante o desenvolvimento deste projeto foram praticados os seguintes conceitos:
 
 
 
-\* Criação de APIs REST
+* Criação de APIs REST
 
-\* Arquitetura em Camadas
+* Arquitetura em Camadas
 
-\* Injeção de Dependência
+* Injeção de Dependência
 
-\* Spring Boot
+* Spring Boot
 
-\* Spring Data JPA
+* Spring Data JPA
 
-\* Hibernate
+* Hibernate
 
-\* Persistência de Dados
+* Persistência de Dados
 
-\* Integração com MySQL
+* Integração com MySQL
 
-\* Testes de API utilizando Postman
+* Testes de API utilizando Postman
 
-\* Operações CRUD
-
-
-
-\---
+* Operações CRUD
 
 
 
-\## 👨‍💻 Autor
+---
+
+
+
+## 👨‍💻 Autor
 
 
 
